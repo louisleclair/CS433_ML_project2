@@ -26,23 +26,7 @@ All the details are in the jupyter notebook where you can find all our plots, ou
 ├── MLProject-Oct2020.pdf
 ├── README.md
 ├── all_datas.csv
-├── data
-│   ├── Output-S2-1.csv
-│   ├── Output-S2-2-1.csv
-│   ├── Output-S2-2-2.csv
-│   ├── Output-S2-2-3.csv
-│   ├── Output-S2-2-4.csv
-│   ├── Output-S2-2-5.csv
-│   ├── Output-S2-2-6.csv
-│   ├── Output-S2-2-7.csv
-│   ├── Output-S2-2-8.csv
-│   ├── Output-S2-2.csv
-│   ├── Output-S2-3.csv
-│   ├── Output-S2-4.csv
-│   ├── Output-S2-5.csv
-│   ├── Output-S2-6.csv
-│   ├── Output-S2-7.csv
-│   └── Output-S2-8.csv
+├── data /
 ├── original\ data
 │   ├── output-S2-1.dat
 │   ├── output-S2-2-1.dat
