@@ -35,10 +35,10 @@ def MAE(prediction, target):
     return sklearn.metrics.mean_absolute_error(y_true=tar, y_pred=pred)
 
 # ==============================================
-# Cross Validation
+# Cross Correlation
 # ==============================================
 
-# Cross validation
+# Cross Correlation
 def build_k_indices(y, k_fold, seed):
     """build k indices for k-fold."""
     num_row = y.shape[0]
@@ -176,3 +176,7 @@ def train(model, criterion, dataset_train, dataset_test, optimizer, num_epochs, 
             print("Epoch {} | Test MAE: {:.5f}".format(epoch, sum(accuracies_test).item()/len(accuracies_test)))
         elif 'MSE' in str(f):
             print("Epoch {} | Test MSE: {:.5f}".format(epoch, sum(accuracies_test).item()/len(accuracies_test)))
+
+def f(x):
+    x = torch.from_numpy(x).float()
+    return model(x)
