@@ -4,7 +4,7 @@ __`Team`__: arbitrageurs
 
 __`Team Members`__: Qais Humeid, Kim Ki Beom, Louis Leclair
 
-After downloading the git.
+After downloading the git. You should have a environment where you can launch a jupyter notebook and run it.
 To start our project you must have the following libraries installed on your computer:
 
 1. Numpy
