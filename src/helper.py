@@ -74,7 +74,7 @@ def cross_validation(y, x, k_indices, k):
 
 def cross_correlation_regression(y, x, k_indices, k_fold, f, f_error):
     """Compute and print the loss for different k depending of the number of k_fold for different training and test set.
-    Show the coefficients of the weights.
+    Show the coefficients of the weights if use the library sklearn.linear_model.		
 
     Args: 
         y (np.array): Nx1 array of the target data.
@@ -93,7 +93,7 @@ def cross_correlation_regression(y, x, k_indices, k_fold, f, f_error):
 
 def cross_correlation_boost(y, x, k_indices, k_fold, f, f_error):
     """Compute and print the loss for different k depending of the number of k_fold for different training and test set.
-    Almost the same method as cross_correlation_regression but print the coefficients of the weights and the biais, to use with XGBoost.
+    Almost the same method as cross_correlation_regression but cannot print the coefficients of the weights, to use with XGBoost.
 
     Args:
         y (np.array): Nx1 array of the target data.
@@ -108,9 +108,7 @@ def cross_correlation_boost(y, x, k_indices, k_fold, f, f_error):
         regr = f
         regr.fit(x_tr, y_tr)
         pred = regr.predict(x_te)
-        coefficient = regr.coef_
-        inter = regr.intercept_
-        print("k = {}, Loss= {:.6f}, intercept= {}, coefficients= {}".format(k+1, f_error(y_true=y_te, y_pred=pred),np.round(inter,4),np.round(coefficient,4)))
+        print("k = {}, Loss= {:.6f}".format(k+1, f_error(y_true=y_te, y_pred=pred)))
 
 # ==============================================
 # Data analysis
