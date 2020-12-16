@@ -1,6 +1,7 @@
 import numpy as np
 import sklearn
 import matplotlib.pyplot as plt
+from tqdm import tqdm
 
 # ==============================================
 # Cost functions
@@ -88,7 +89,7 @@ def cross_correlation_regression(y, x, k_indices, k_fold, f, f_error):
         regr = f
         regr.fit(x_tr, y_tr)
         pred = regr.predict(x_te)
-        print("k = {} and loss= {:.6f} and coef= {}".format(k, f_error(y_true=y_te, y_pred=pred), np.round(regr.coef_, 4)))
+        print("k = {} and loss= {:.6f} and coef= {}".format(k+1, f_error(y_true=y_te, y_pred=pred), np.round(regr.coef_, 4)))
 
 def cross_correlation_boost(y, x, k_indices, k_fold, f, f_error):
     """Compute and print the loss for different k depending of the number of k_fold for different training and test set.
@@ -107,7 +108,7 @@ def cross_correlation_boost(y, x, k_indices, k_fold, f, f_error):
         regr = f
         regr.fit(x_tr, y_tr)
         pred = regr.predict(x_te)
-        print("k = {} and Loss= {:.6f}".format(k, f_error(y_true=y_te, y_pred=pred)))
+        print("k = {} and Loss= {:.6f}".format(k+1, f_error(y_true=y_te, y_pred=pred)))
 
 # ==============================================
 # Data analysis

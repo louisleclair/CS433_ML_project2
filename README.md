@@ -11,7 +11,7 @@ To start our project you must have the following libraries installed on your com
 2. matplotlib
 3. pandas
 4. xgboost
-5. scipy
+5. tqdm
 6. [pytorch](https://pytorch.org) (see install pytorch section)
 7. [sklearn](https://scikit-learn.org/stable/install.html)
 
