@@ -177,6 +177,3 @@ def train(model, criterion, dataset_train, dataset_test, optimizer, num_epochs, 
         elif 'MSE' in str(f):
             print("Epoch {} | Test MSE: {:.5f}".format(epoch, sum(accuracies_test).item()/len(accuracies_test)))
 
-def f(x):
-    x = torch.from_numpy(x).float()
-    return model(x)
